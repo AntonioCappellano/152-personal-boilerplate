@@ -1,7 +1,14 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+import AboutPage from "./pages/AboutPage";
+
 export default function App() {
   return (
-    <div className="container">
-      <h1>React router boilerplate</h1>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route index Component={HomePage} />
+        <Route path="/about-us" Component={AboutPage} />
+      </Routes>
+    </BrowserRouter>
   );
 }
